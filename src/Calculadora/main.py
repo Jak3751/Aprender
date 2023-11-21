@@ -65,4 +65,5 @@ b_18 = Button(frame_corpo, text="=", width=5, height=2, bg=cor5, fg=cor2, font=(
 b_18.place(x=177, y=208)
 
 
+
 janela.mainloop()
