@@ -88,5 +88,4 @@ b_18 = Button(frame_corpo, command=lambda:entrar_valores('='), text="=", width=5
 b_18.place(x=177, y=208)
 
 
-
 janela.mainloop()
