@@ -8,12 +8,10 @@ cor3 = "#38576b"  # Azul
 cor4 = "#ECEFF1"  # Cinza
 cor5 = "#FFAB40"  # Laranja
 
-
 janela = Tk()
 janela.title("Calculadora")
 janela.geometry("235x310")
 janela.config(bg=cor1)
-
 
 # Frames
 frame_tela = Frame(janela, width=235, height=50, bg=cor3)
@@ -22,15 +20,11 @@ frame_tela.grid(row=0, column=0)
 frame_corpo = Frame(janela, width=235, height=268)
 frame_corpo.grid(row=1, column=0)
 
-
-
 # Variavel todos valores
 todos_valores = ''
 
-
 # Label
 valor_texto = StringVar()
-
 
 # Função somar valores
 def entrar_valores(event):
@@ -56,8 +50,6 @@ def limpar_tela():
 
 app_label = Label(frame_tela, textvariable=valor_texto, width=16, height=2, padx=7, relief=FLAT, anchor="e", justify=RIGHT, font=('Ivy 18' ), bg=cor3, fg=cor2)
 app_label.place(x=0, y=0)
-
-
 
 # Botões
 b_1 = Button(frame_corpo, command= limpar_tela, text="C", width=11, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
@@ -100,6 +92,5 @@ b_17 = Button(frame_corpo, command=lambda:entrar_valores(','), text=",", width=5
 b_17.place(x=118, y=208)
 b_18 = Button(frame_corpo, command=calcular, text="=", width=5, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_18.place(x=177, y=208)
-
 
 janela.mainloop()
