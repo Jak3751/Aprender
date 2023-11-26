@@ -88,7 +88,7 @@ b_15.place(x=177, y=156)
 
 b_16 = Button(frame_corpo, command=lambda:entrar_valores('0'), text="0", width=11, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_16.place(x=-1, y=208)  # Direcinando botão, vertical/horizontal
-b_17 = Button(frame_corpo, command=lambda:entrar_valores(','), text=",", width=5, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_17 = Button(frame_corpo, command=lambda:entrar_valores('.'), text=".", width=5, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_17.place(x=118, y=208)
 b_18 = Button(frame_corpo, command=calcular, text="=", width=5, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_18.place(x=177, y=208)
