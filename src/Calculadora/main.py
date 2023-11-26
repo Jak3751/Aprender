@@ -27,7 +27,12 @@ frame_corpo.grid(row=1, column=0)
 # Variavel todos valores
 todos_valores = ''
 
-# Função
+
+# Label
+valor_texto = StringVar()
+
+
+# Função somar valores
 def entrar_valores(event):
     
     global todos_valores
@@ -36,9 +41,18 @@ def entrar_valores(event):
     #Apresentar valor em tela
     valor_texto.set(todos_valores)
 
+# Funçao calcular
+def calcular():
+    global todos_valores
+    resultado = eval(todos_valores)
 
-# Label
-valor_texto = StringVar()
+    valor_texto.set(str(resultado))
+    
+# Funçao limpar
+def limpar_tela():
+    global todos_valores
+    todos_valores = ""
+    valor_texto.set("")
 
 app_label = Label(frame_tela, textvariable=valor_texto, width=16, height=2, padx=7, relief=FLAT, anchor="e", justify=RIGHT, font=('Ivy 18' ), bg=cor3, fg=cor2)
 app_label.place(x=0, y=0)
@@ -46,7 +60,7 @@ app_label.place(x=0, y=0)
 
 
 # Botões
-b_1 = Button(frame_corpo, text="C", width=11, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_1 = Button(frame_corpo, command= limpar_tela, text="C", width=11, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_1.place(x=-1, y=0)  # Direcinando botão, vertical/horizontal
 b_2 = Button(frame_corpo, command=lambda:entrar_valores('%'),  text="%", width=5, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_2.place(x=118, y=0)
@@ -84,7 +98,7 @@ b_16 = Button(frame_corpo, command=lambda:entrar_valores('0'), text="0", width=1
 b_16.place(x=-1, y=208)  # Direcinando botão, vertical/horizontal
 b_17 = Button(frame_corpo, command=lambda:entrar_valores(','), text=",", width=5, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_17.place(x=118, y=208)
-b_18 = Button(frame_corpo, command=lambda:entrar_valores('='), text="=", width=5, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_18 = Button(frame_corpo, command=calcular, text="=", width=5, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_18.place(x=177, y=208)
 
 
