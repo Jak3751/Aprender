@@ -36,6 +36,7 @@ df
 fig=plt.figure(figsize=(18, 13), dpi=80, facecolor='w', edgecolor='k')
 plt.rcParams.update({'font.size':22})
 df["tweets"].plot.barth(title="Tendências no Twitter")
+
 <matplotlib.axes._subplots.AxesSubplot at 0x9b5f950>
 
 <figure size 1440x1040 with 0 Axes>
