@@ -1,14 +1,13 @@
 from calculadora import Calculadora
 from comodo import Comodo
 
-
 calc = Calculadora()
 
-largura: float = float(input("Informe largura do cômodo em metros: "))
-altura: float = float(input("Informe altura do cômodo em metros: "))
-profundidade: float = float(input("Informe profundidade do cômodo em metros: "))
-
-comodo = Comodo(altura, largura, profundidade)
+comodo = Comodo(
+    input('Qual altura do cômodo, em metros? '),
+    input('Qual largura do cômodo, em metros? '),
+    input('Qual profundidade do cômodo, em metros ? ')
+)
 
 print("A área das paredes é: ",
     calc.calcular_area_paredes(comodo.largura, comodo.profundidade, comodo.altura), "metros")
