@@ -8,6 +8,7 @@ comodo = Comodo(
     input('Qual largura do cômodo, em metros? '),
     input('Qual profundidade do cômodo, em metros ? ')
 )
+
 print("A área das paredes é: ",
     calc.calcular_area_paredes(comodo), "metros")
 
