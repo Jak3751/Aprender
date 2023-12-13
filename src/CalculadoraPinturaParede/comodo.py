@@ -5,9 +5,16 @@ class Comodo:
 
     def __init__(self, altura, largura, profundidade):
         self.altura = altura
+        if self.altura <= 0:
+            print('Valor altura inválido!')
         self.largura = largura
+        if self.largura <= 0:
+            print('Valor largura inválido!')
         self.profundidade = profundidade
-
+        if self.profundidade <= 0:
+            print('Valor profundidade inválido!')
+            exit()
+            
     @property
     def altura(self):
         return self.__altura
