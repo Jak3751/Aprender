@@ -14,6 +14,7 @@ class Comodo:
         if self.profundidade <= 0:
             print('Valor profundidade inválido!')
             exit()
+            
     @property
     def altura(self):
         return self.__altura
