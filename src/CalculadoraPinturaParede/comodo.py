@@ -49,3 +49,4 @@ class Comodo:
         except Exception:
             print('O valor informado da profundidade é inválido')
             exit()
+            
