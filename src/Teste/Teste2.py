@@ -29,10 +29,39 @@
 
 
 #Faça um algoritmo que solicite o ano que o usuário nasceu, depois disso, faça o programa descrever se o usuário fará ou já fez 18 anos neste ano.
+#ano_nascimento = int(input("Informe o ano que você nasceu: "))
 
+#maior_menor = (2023 - ano_nascimento)
+
+#if maior_menor == 18:
+#    print("Você fará ou já fez 18 anos")
+#else:
+#    print("menor de idade") 
 
 
 #Faça um programa que solicite ao usuário sua idade, depois disso, exiba a classificação etária de acordo com as faixas de valores:
+#Criança para 0 até 11 anos;
+#Adolescente para 12 até 18 anos;
+#Jovem para 19 até 24 anos;
+#Adulto para 25 até 40 anos;
+#Meia Idade para 41 até 60 anos;
+#Idoso acima de 60 anos.
+
+#idade = int(input("informe sua idade: "))
+
+#if idade >= 0 and idade <= 11:
+#    print("Você é criança")
+#elif idade >= 12 and idade <= 18:
+#    print("Você é adolescente")
+#elif idade >= 19 and idade <= 24:
+#    print("Você é jovem")
+#elif idade >= 25 and idade <= 40:
+#    print("Você é adulto")
+#elif idade >= 41 and idade <= 60:
+#    print("Você esta na meia idade")
+#else:
+#    print("seu velho")
+
 
 #Faça um programa que solicite ao usuário 2 valores, utilize uma condição ternária para escrever qual o maior valor: o primeiro ou o segundo (caso os valores sejam iguais, considere o segundo).
 
