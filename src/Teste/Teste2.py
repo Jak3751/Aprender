@@ -128,3 +128,26 @@ cidades = []
 #posicao_para_excluir = int( input("Escolha uma posição de 0(zero) até quatro para excluir da lista: "))
 #del nomes[posicao_para_excluir]
 #print(nomes)
+
+
+
+#Faça um programa que solicite o nome do usuário e a idade do usuário, depois disso exiba a mensagem: "{nome} possui {idade} anos.". Esta mensagem deve ser escrita em uma função.
+#def escrever_nome_idade(nome, idade):
+#    print(nome, "possui",idade,"anos.")
+
+#nome_digitado = str(input("Digite seu nome: "))
+#idade_digitada = int(input("Digite sua idade: "))
+
+#escrever_nome_idade(nome_digitado, idade_digitada)
+
+
+#Faça um programa que solicite dois números ao usuário e exiba a multiplicação deles. A multiplicação deve ser calculada em uma função.
+#def multiplicar(numero1, numero2):
+#    return numero1 * numero2
+
+#numero = int(input("Digite o primeiro número: "))
+#numero2 = int(input("Digite o segundo número: "))
+#resultado = multiplicar(numero, numero2)
+#print(resultado)
+
+
