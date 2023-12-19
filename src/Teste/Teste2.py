@@ -65,18 +65,56 @@
 
 #Faça um programa que solicite ao usuário 2 valores, utilize uma condição ternária para escrever qual o maior valor: o primeiro ou o segundo (caso os valores sejam iguais, considere o segundo).
 
+#primeiro_valor = int( input("Digite um valor: "))
+#segundo_valor = int( input("Digite um valor: "))
+#print( "Primeiro" if primeiro_valor > segundo_valor else "Segundo")
+
 #Faça um programa que solicite o nome do usuário e depois disso faça uma saudação no formato: "Olá {nome digitado pelo usuário}".
+#nome = input("informe seu nome: ")
+#print("nome digitado pelo usuário: ",nome)
+
 
 #Faça um programa que solicite uma mensagem qualquer para o usuário e exiba esta mensagem com todas as letras em maiúsculo.
+#frase = input("Digite uma frase qualquer: ")
+#print(frase.upper)
+
 
 #Faça um programa que solicite a idade do usuário, verifique se o texto informado só contém números. Caso contenha somente números exiba a mensagem: "Você tem {idade digitada} anos.", caso contrário exiba a mensagem: "Você digitou uma idade inválida".
 
+#if idade.isdigit():
+#    print(f"Você tem {idade} anos.")
+#else:
+#    print("Você digitou uma idade inválida")
+
 #Faça um programa que solicite o nome completo do usuário e exiba somente o seu segundo nome/primeiro sobrenome.
+#nome_completo = input("Digite seu nome completo: ")
+#nome_completo_dividido = nome_completo.split(" ")
+#print(nome_completo_dividido[1])
+
+
 
 #Faça um programa que inicialize uma lista com o nome das pessoas da sua família.
+#familia = ["Jakson", "Aline", "Lola", "Maggie"]
+#print(familia)
+
 
 #Faça um programa que inicialize uma lista vazia e solicite ao usuário 3 nomes de cidades, um por vez, cada vez que o usuário digitar um nome, o programa deve incluir este nome na lista de cidades.
+cidades = []
+
+#cidade = input("Digite o nome da primeira cidade: ")
+#cidades.append(cidade)
+#cidades.append(input("Digite o nome da segunda cidade: "))
+#cidades.append(input("Digite o nome da terceira cidade: "))
+#print(cidades)
 
 #Faça um programa que inicialize uma lista com vários números diferentes, depois disso, solicite ao usuário um número, verifique se o número está ou não na lista e exiba uma mensagem notificando o usuário do resultado.
+#numeros = [1,2,3]
+#numero = int(input("informe um numero: "))
+
+#if numero in numeros:
+#    print("Esta na lista")
+#else:
+#    print("Não esta na lista")
+    
 
 #Faça um programa que inicialize uma lista vazia e a preencha com 5 nomes diferentes digitados pelo usuário, depois disso solicite um número de 0 até 4 e remova o elemento desta posição.
