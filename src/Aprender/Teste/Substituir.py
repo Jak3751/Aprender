@@ -17,7 +17,7 @@ def substituir_asterisco_pelo_ultimo_numero(frases):
 
 # Exemplo de uso
 frases_originais = [
-    "update TESTLOTEVALIDADEMOVIMENTO set QTDE = (-*) where PRODUTO = '005609' and IDVENDA = '0414836';: 20",
+"update TESTLOTEVALIDADEMOVIMENTO set QTDE = (-*) where PRODUTO = '005609' and IDVENDA = '0414836';: 20",
 "update TESTLOTEVALIDADEMOVIMENTO set QTDE = (-*) where PRODUTO = '003310' and IDVENDA = '0408905';: 5",
 "update TESTLOTEVALIDADEMOVIMENTO set QTDE = (-*) where PRODUTO = '006851' and IDVENDA = '0412648';: 20",
 "update TESTLOTEVALIDADEMOVIMENTO set QTDE = (-*) where PRODUTO = '005609' and IDVENDA = '0413041';: 120",
