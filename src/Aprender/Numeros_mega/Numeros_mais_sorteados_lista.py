@@ -5,7 +5,7 @@ def extrair_numeros(frase):
     # Usando expressão regular para extrair números da frase
     return [int(numero) for numero in re.findall(r'\d+', frase)]
 
-def encontrar_numeros_frequentes(numeros_sorteados, quantidade=5):
+def encontrar_numeros_frequentes(numeros_sorteados, quantidade=6):
     contagem_numeros = Counter(numeros_sorteados)
     numeros_mais_frequentes = contagem_numeros.most_common(quantidade)
 
