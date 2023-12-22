@@ -1,4 +1,4 @@
-import pygame
+import Aprender.Teste.pygame as pygame
 cols = ['#0000ff','0000aa','#000088','#000055','#000033','#000011']
 
 w, h = 700, 500
