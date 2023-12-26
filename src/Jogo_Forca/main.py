@@ -6,13 +6,13 @@ print ("Olá ", name, " bem vindo ao jogo da forca!")
 
 time.sleep(1)
 
-print("Start quesssing ...")
+print("Começando ...")
 
 time.sleep(0.5)
 
 listOfNords = ("devmidea","secret","cat","trash","python")
 
-randomNumber = random.randint(0, len(listOfNords) 1-)
+randomNumber = random.randint(0, len(listOfNords) -1)
 
 guessWord = listOfNords[randomNumber]
 
@@ -33,16 +33,16 @@ while turns > 0:
             failed += 1
         
         if failed == 0:
-            print("\nYou win")
+            print("\nBoa, você venceu!")
             break
         print
 
-        guess = input("guess a charecter: ")
+        guess = input("Adivinhe palavra: ")
         guesses += guess
         
         if guess not in word:
             turns -= 1
-            print("Wrong guess \n you have", turns,"tries left\n")
+            print("Sugestão errada! \n você tem", turns,"tentativas\n")
             if turns == 0:
-                print("You loose\n")
+                print("Você perdeu!\n")
 
