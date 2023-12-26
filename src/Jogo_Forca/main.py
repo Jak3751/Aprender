@@ -1,48 +1,50 @@
-import time
 import random
 
-name = input("Qual é seu nome ? ")
-print ("Olá ", name, " bem vindo ao jogo da forca!")
+def escolher_palavra():
+    palavras = ['python', 'programacao', 'computador', 'desenvolvimento', 'tecnologia']
+    return random.choice(palavras)
 
-time.sleep(1)
-
-print("Começando ...")
-
-time.sleep(0.5)
-
-listOfNords = ("devmidea","secret","cat","trash","python")
-
-randomNumber = random.randint(0, len(listOfNords) -1)
-
-guessWord = listOfNords[randomNumber]
-
-word = guessWord
-
-guesses = ''
-
-turns = 10
-
-while turns > 0:
-    failed = 0
-
-    for char in word:
-        if char in guesses:
-            print(char)
+def mostrar_forca(palavra, letras_corretas):
+    for letra in palavra:
+        if letra in letras_corretas:
+            print(letra, end=' ')
         else:
-            print("_")
-            failed += 1
-        
-        if failed == 0:
-            print("\nBoa, você venceu!")
+            print('_', end=' ')
+    print()
+
+def jogar_forca():
+    palavra_secreta = escolher_palavra()
+    letras_corretas = []
+    tentativas = 6  # Número máximo de tentativas
+
+    print("Bem-vindo ao Jogo da Forca!")
+
+    while tentativas > 0:
+        mostrar_forca(palavra_secreta, letras_corretas)
+
+        palpite = input("Digite uma letra: ").lower()
+
+        if len(palpite) != 1 or not palpite.isalpha():
+            print("Por favor, digite uma única letra válida.")
+            continue
+
+        if palpite in letras_corretas:
+            print("Você já tentou essa letra. Tente outra.")
+            continue
+
+        if palpite in palavra_secreta:
+            print("Letra correta!")
+            letras_corretas.append(palpite)
+        else:
+            print("Letra incorreta. Você perdeu uma tentativa.")
+            tentativas -= 1
+
+        if set(letras_corretas) == set(palavra_secreta):
+            print("Parabéns! Você acertou a palavra:", palavra_secreta)
             break
-        print
 
-        guess = input("Adivinhe palavra: ")
-        guesses += guess
-        
-        if guess not in word:
-            turns -= 1
-            print("Sugestão errada! \n você tem", turns,"tentativas\n")
-            if turns == 0:
-                print("Você perdeu!\n")
+    if tentativas == 0:
+        print("Você perdeu! A palavra correta era:", palavra_secreta)
 
+if __name__ == "__main__":
+    jogar_forca()
