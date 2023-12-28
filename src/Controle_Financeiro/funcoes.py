@@ -3,10 +3,10 @@ import fdb
 def conectar_banco():
     try:
         conexao = fdb.connect(
-            host='127.0.0.1',
-            database='Financeiro.fdb',
-            user='sysdba',
+            dsn='C:\\Users\\jakson.silva\\Desktop\\Python\\Financeiro.fdb',
+            user='SYSDBA',
             password='masterkey',
+            port='3050',
             charset='UTF8'
         )
         return conexao
@@ -17,7 +17,7 @@ def conectar_banco():
 def cadastrar_despesa(conexao, descricao, valor):
     try:
         cursor = conexao.cursor()
-        cursor.execute("INSERT INTO despesas (descricao, valor) VALUES (?, ?)", (descricao, valor))
+        cursor.execute("INSERT INTO despesas (id, descricao, valor) VALUES (next value for despesas, ?, ?)", (descricao, valor))
         conexao.commit()
         print("Despesa cadastrada com sucesso.")
     except Exception as e:
