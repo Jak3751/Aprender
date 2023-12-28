@@ -3,10 +3,10 @@ import fdb
 def conectar_banco():
     try:
         conexao = fdb.connect(
-            host='seu_host',
-            database='seu_banco',
-            user='seu_usuario',
-            password='sua_senha',
+            host='127.0.0.1',
+            database='Financeiro.fdb',
+            user='sysdba',
+            password='masterkey',
             charset='UTF8'
         )
         return conexao
