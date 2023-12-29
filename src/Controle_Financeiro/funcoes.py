@@ -17,7 +17,7 @@ def conectar_banco():
 def cadastrar_despesa(conexao, descricao, valor):
     try:
         cursor = conexao.cursor()
-        cursor.execute("INSERT INTO despesas (id, descricao, valor) VALUES (next value for despesas, ?, ?)", (descricao, valor))
+        cursor.execute("INSERT INTO despesas (id, descricao, valor) VALUES (next value for despesas, ?, ?)", (descricao.upper(), valor))
         conexao.commit()
         print("Despesa cadastrada com sucesso.")
     except Exception as e:
@@ -26,7 +26,7 @@ def cadastrar_despesa(conexao, descricao, valor):
 def lancar_despesa(conexao):
     descricao = input("Digite a descrição da despesa: ")
     valor = float(input("Digite o valor da despesa: "))
-    cadastrar_despesa(conexao, descricao, valor)
+    cadastrar_despesa(conexao, descricao.upper(), valor)
 
 def excluir_despesa(conexao, id_despesa):
     try:
