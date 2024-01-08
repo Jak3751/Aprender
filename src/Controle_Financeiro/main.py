@@ -16,7 +16,7 @@ def main():
             menu()
             opcao = input("Escolha uma opção: ")
             if opcao == "1":
-                cadastrar_tipo_lancamento(conexao)
+                cadastrar_tipo_lancamento(conexao, descricao)
             elif opcao == "2":
                 incluir_lancamento(conexao)
             elif opcao == "3":
