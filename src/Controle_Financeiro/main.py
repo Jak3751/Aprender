@@ -1,11 +1,11 @@
-from funcoes import conectar_banco, lancar_despesa, excluir_despesa, consultar_despesas, fechar_conexao
+from funcoes import conectar_banco, cadastrar_tipo_lancamento, incluir_lancamento, excluir_lancamento, consultar_lancamento, fechar_conexao
 
 def menu():
     print("==== Sistema de Controle de Despesas ====")
-    print("1. Cadastrar tipo Despesa")
-    print("2. Lançar Despesa")
-    print("3. Excluir Despesa")
-    print("4. Consultar Despesas")
+    print("1. Cadastrar Tipo Lançamento")
+    print("2. Incluir Lançamento")
+    print("3. Excluir Lançamento")
+    print("4. Consultar Lançamento")
     print("5. Sair")
 
 def main():
@@ -15,14 +15,15 @@ def main():
         while True:
             menu()
             opcao = input("Escolha uma opção: ")
-
-            if opcao == "2":
-                lancar_despesa(conexao)
+            if opcao == "1":
+                cadastrar_tipo_lancamento(conexao)
+            elif opcao == "2":
+                incluir_lancamento(conexao)
             elif opcao == "3":
                 id_despesa = int(input("Digite o ID da despesa a ser excluída: "))
-                excluir_despesa(conexao, id_despesa)
+                excluir_lancamento(conexao, id_despesa)
             elif opcao == "4":
-                consultar_despesas(conexao)
+                consultar_lancamento(conexao)
             elif opcao == "5":
                 print("Saindo do sistema.")
                 break
